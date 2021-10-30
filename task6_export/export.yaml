@@ -1,0 +1,16 @@
+#YAML
+  Man_1:
+  name: Сергей
+  age: 20
+  address: Москва
+
+  Man_2:
+  name: Паша
+  age: 30
+  address: Киев
+
+  Man_3:
+  name: Магомед
+  age: 40
+  address: Махачкала
+

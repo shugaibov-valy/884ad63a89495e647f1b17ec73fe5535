@@ -1,0 +1,16 @@
+<?xml version="1.0" enconding="utf-8"?>
+<Man_1>
+    <name>Сергей</name>
+    <age>20</age>
+    <address>Москва</address>
+</Man_1>
+<Man_2>
+    <name>Паша</name>
+    <age>30</age>
+    <address>Киев</address>
+</Man_2>
+<Man_3>
+    <name>Магомед</name>
+    <age>40</age>
+    <address>Махачкала</address>
+</Man_3>
