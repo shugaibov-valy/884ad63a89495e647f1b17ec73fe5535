@@ -1,4 +1,4 @@
-# 3. Run file stack.c
+# 1. Run file stack.c
 
 ```bash
 

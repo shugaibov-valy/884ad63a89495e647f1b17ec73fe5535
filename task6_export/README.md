@@ -1,4 +1,4 @@
-# 3. Run file export.c
+# Run file export.c
 
 ```bash
 
