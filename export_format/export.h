@@ -21,7 +21,7 @@ void export_json(struct Man *array, FILE *file){
     }
     fprintf(file, "}\n");
     fclose(file);      // close file
-    printf("Файл export.json создан!\n");
+    printf("Файл files/export.json создан!\n");
 }
 
 // export for xml file
@@ -37,7 +37,7 @@ void export_xml(struct Man *array, FILE *file){
         fprintf(file, "</Man_%d>\n", i+1);
     }
     fclose(file);     // close file
-    printf("Файл export.xml создан!\n");
+    printf("Файл files/export.xml создан!\n");
 }
 
 // export for yaml file
@@ -52,34 +52,25 @@ void export_yaml(struct Man *array, FILE *file){
         fprintf(file, "  address: %s\n\n", array[i].address);
     }
     fclose(file);    // close file
-    printf("Файл export.yaml создан!\n");
+    printf("Файл files/export.yaml создан!\n");
 }
 
-int main(){
-    struct Man man_1 = {"Сергей", 20, "Москва"};
-    struct Man man_2 = {"Паша", 30, "Киев"};
-    struct Man man_3 = {"Магомед", 40, "Махачкала"};
-    struct Man arr_people[] = {man_1, man_2, man_3};
 
-    printf("Введите тип файла для экспорта(json, xml, yaml): ");
-
-    char input_format[31] = "";   // value of input
-    scanf("%30s", input_format);    // input of name format
-
+void check_format(char *input_format, struct Man *array){
     if (strcmp(input_format,  "json") == 0){
-        FILE *file = fopen("export.json", "w");
-        export_json(arr_people, file);
+        FILE *file = fopen("files/export.json", "w");
+        export_json(array, file);
     }
     else if (strcmp(input_format, "xml") == 0){
-        FILE *file = fopen("export.xml", "w");
-        export_xml(arr_people, file);
+        FILE *file = fopen("files/export.xml", "w");
+        export_xml(array, file);
     }
     else if (strcmp(input_format, "yaml") == 0){
-        FILE *file = fopen("export.yaml", "w");
-        export_yaml(arr_people, file);
+        FILE *file = fopen("files/export.yaml", "w");
+        export_yaml(array, file);
     }
     else
         printf("Такого формата не существует!\n");
 
-    return 0;
 }
+
